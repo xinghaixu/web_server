@@ -359,9 +359,8 @@ if __name__ == '__main__':
     #  test()
 
     #单线程
-    srvr = BaseHTTPServer.HTTPServer(serveraddr, SimpleHTTPRequestHandler)
+    # srvr = BaseHTTPServer.HTTPServer(serveraddr, SimpleHTTPRequestHandler)
 
     #多线程
-    #  srvr = ThreadingServer(serveraddr, SimpleHTTPRequestHandler)
-
+    srvr = ThreadingServer(serveraddr, SimpleHTTPRequestHandler)
     srvr.serve_forever()
